@@ -4,9 +4,9 @@ emoji: 🔥
 colorFrom: purple
 colorTo: red
 sdk: gradio
-sdk_version: 5.21.0
-app_file: app.py
+sdk_version: 4.44.1
+app_file: gradio_app.py
 pinned: false
+short_description: Fast Images-to-3D Generation within 1 Second
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
