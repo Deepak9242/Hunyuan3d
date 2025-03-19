@@ -56,22 +56,6 @@ def get_example_txt_list():
     return txt_list
 
 
-def get_example_mv_list():
-    print('Loading example mv list ...')
-    mv_list = list()
-    root = './assets/example_mv_images'
-    for mv_dir in os.listdir(root):
-        view_list = []
-        for view in ['front', 'back', 'left', 'right']:
-            path = os.path.join(root, mv_dir, f'{view}.png')
-            if os.path.exists(path):
-                view_list.append(path)
-            else:
-                view_list.append(None)
-        mv_list.append(view_list)
-    return mv_list
-
-
 def gen_save_folder(max_size=200):
     os.makedirs(SAVE_DIR, exist_ok=True)
 
@@ -502,11 +486,7 @@ def build_app():
                         with gr.Row():
                             gr.Examples(examples=example_ts, inputs=[caption],
                                         label=None, examples_per_page=18)
-                    with gr.Tab('MultiView to 3D Gallery', id='tab_mv_gallery', visible=MV_MODE) as tab_mv:
-                        with gr.Row():
-                            gr.Examples(examples=example_mvs,
-                                        inputs=[mv_image_front, mv_image_back, mv_image_left, mv_image_right],
-                                        label=None, examples_per_page=6)
+                 
 
         gr.HTML(f"""
         <div align="center">
@@ -697,7 +677,6 @@ if __name__ == '__main__':
     """
     example_is = get_example_img_list()
     example_ts = get_example_txt_list()
-    example_mvs = get_example_mv_list()
 
     SUPPORTED_FORMATS = ['glb', 'obj', 'ply', 'stl']
 
