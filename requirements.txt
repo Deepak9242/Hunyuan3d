@@ -39,4 +39,3 @@ onnxruntime
 #gevent
 #geventhttpclient
 
-diso
