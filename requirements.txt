@@ -38,3 +38,5 @@ rembg
 onnxruntime
 #gevent
 #geventhttpclient
+
+diso
