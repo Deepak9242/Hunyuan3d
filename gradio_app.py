@@ -363,11 +363,10 @@ def build_app():
     Tencent Hunyuan3D Team
     </div>
     <div align="center">
-      <a href="https://github.com/tencent/Hunyuan3D-2">Github</a> &ensp; 
-      <a href="http://3d-models.hunyuan.tencent.com">Homepage</a> &ensp;
+      <a href="https://github.com/tencent/FlashVDM">Github</a> &ensp; 
       <a href="https://3d.hunyuan.tencent.com">Hunyuan3D Studio</a> &ensp;
-      <a href="#">Technical Report</a> &ensp;
-      <a href="https://huggingface.co/Tencent/Hunyuan3D-2"> Pretrained Models</a> &ensp;
+      <a href="https://arxiv.org/abs/2503.16302">Technical Report</a> &ensp;
+      <a href="https://huggingface.co/tencent/Hunyuan3D-2mini/tree/main/hunyuan3d-dit-v2-mini-turbo"> Pretrained Models</a> &ensp;
     </div>
     """
     custom_css = """
