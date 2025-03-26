@@ -466,7 +466,7 @@ class Hunyuan3DDiTPipeline:
         return extra_step_kwargs
 
     def prepare_latents(self, batch_size, dtype, device, generator, latents=None):
-        shape = (batch_size, *self.vae.latent_shape)
+        shape = (batch_size, 3072, 64)
         if isinstance(generator, list) and len(generator) != batch_size:
             raise ValueError(
                 f"You have passed a list of generators of length {len(generator)}, but requested an effective batch"
