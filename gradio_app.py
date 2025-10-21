@@ -40,7 +40,7 @@ if True:
     print("cd /home/user/app/hy3dgen/texgen/differentiable_renderer/ && bash compile_mesh_painter.sh")
     os.system("cd /home/user/app/hy3dgen/texgen/differentiable_renderer/ && bash compile_mesh_painter.sh")
     print('install custom')
-    subprocess.run(shlex.split("pip install custom_rasterizer-0.1-cp310-cp310-linux_x86_64.whl"), check=True)
+    #subprocess.run(shlex.split("pip install custom_rasterizer-0.1-cp310-cp310-linux_x86_64.whl"), check=True)
 
 
 def get_example_img_list():
@@ -91,7 +91,7 @@ def export_mesh(mesh, save_folder, textured=False, type='glb'):
 
 def randomize_seed_fn(seed: int, randomize_seed: bool) -> int:
     if randomize_seed:
-        seed = random.randint(0, MAX_SEED)
+        seed = random.randint(0, int(MAX_SEED))
     return seed
 
 
