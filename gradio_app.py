@@ -40,7 +40,8 @@ if True:
     print("cd /home/user/app/hy3dgen/texgen/differentiable_renderer/ && bash compile_mesh_painter.sh")
     os.system("cd /home/user/app/hy3dgen/texgen/differentiable_renderer/ && bash compile_mesh_painter.sh")
     print('install custom')
-    #subprocess.run(shlex.split("pip install custom_rasterizer-0.1-cp310-cp310-linux_x86_64.whl"), check=True)
+    pip_path = os.environ["PIP_HOME"]
+    subprocess.run(shlex.split(pip_path + " install custom_rasterizer-0.1-cp310-cp310-linux_x86_64.whl"), check=True)
 
 
 def get_example_img_list():
