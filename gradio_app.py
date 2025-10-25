@@ -38,10 +38,11 @@ if True:
     import sys
     import shlex
     diff_path = os.environ["DIFF_PATH"]
-    print(f"cd {diff_path} && bash compile_mesh_painter.sh")
-    os.system(f"cd {diff_path} && bash compile_mesh_painter.sh")
-    print('install custom')
     pip_path = os.environ["PIP_HOME"]
+    python_path = os.environ["PYTHON_PATH"]
+    print(f"cd {diff_path} && {python_path} setup.py install")
+    os.system(f"cd {diff_path} && {python_path} setup.py install")
+    print('install custom')
     subprocess.run(shlex.split(pip_path + " install custom_rasterizer-0.1-cp310-cp310-linux_x86_64.whl"), check=True)
 
 
