@@ -37,8 +37,9 @@ if True:
     import subprocess
     import sys
     import shlex
-    print("cd /home/user/app/hy3dgen/texgen/differentiable_renderer/ && bash compile_mesh_painter.sh")
-    os.system("cd /home/user/app/hy3dgen/texgen/differentiable_renderer/ && bash compile_mesh_painter.sh")
+    diff_path = os.environ["DIFF_PATH"]
+    print(f"cd {diff_path} && bash compile_mesh_painter.sh")
+    os.system(f"cd {diff_path} && bash compile_mesh_painter.sh")
     print('install custom')
     pip_path = os.environ["PIP_HOME"]
     subprocess.run(shlex.split(pip_path + " install custom_rasterizer-0.1-cp310-cp310-linux_x86_64.whl"), check=True)
